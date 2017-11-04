@@ -26,8 +26,7 @@ import com.Model.Supplier;
 public class HomeController {
 	private static Logger log = LoggerFactory.getLogger(ProductController.class);
 
-	// @Autowired User
-
+	
 	@Autowired
 	HttpSession session;
 
@@ -60,33 +59,24 @@ public class HomeController {
 		ModelAndView mv = new ModelAndView("Home");
 		mv.addObject("message", "Thank you for visiting Midas Touch! <br>");
 		mv.addObject("isUserAtHomePage", "true");
-		// model.addAttribute("message", "Thank you for visiting Shopping Cart!
-		// <br>");
-
-		// get all categories
+		
 		List<Category> categoryList = categoryDAO.list();
 
-		// attach category to session
 		session.setAttribute("categoryList", categoryList);
 		session.setAttribute("category", category);
 
-		// get products
 		List<Product> productList = productDAO.list();
 
-		// attach products to session
 		session.setAttribute("productList", productList);
 		session.setAttribute("product", product);
 
-		// get products
 		List<Supplier> supplierList = supplierDAO.list();
 
-		// attach supplier to session
 		session.setAttribute("supplierList", supplierList);
 		session.setAttribute("supplier", supplier);
 		
 
 		return mv;
-		// return "Home";
 	}
 
 	
@@ -97,29 +87,22 @@ public class HomeController {
 		mv.addObject("message", "Thank you for visiting Midas Touch! <br>");
 		mv.addObject("isUserAtHomePage", "true");
 		
-		// get all categories
 		List<Category> categoryList = categoryDAO.list();
 
-		// attach category to session
 		session.setAttribute("categoryList", categoryList);
 		session.setAttribute("category", category);
 
-		// get products
 		List<Product> productList = productDAO.list();
 
-		// attach products to session
 		session.setAttribute("productList", productList);
 		session.setAttribute("product", product);
 
-		// get products
 		List<Supplier> supplierList = supplierDAO.list();
 
-		// attach supplier to session
 		session.setAttribute("supplierList", supplierList);
 		session.setAttribute("supplier", supplier);
 
 		return mv;
-		// return "Home";
 	}
 
 	@RequestMapping("/Login")

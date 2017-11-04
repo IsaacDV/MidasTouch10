@@ -23,7 +23,6 @@ public class ContactUsController {
 	@Autowired ContactDAO contactDAO;
 	
 	
-	//@RequestMapping(value="saveContact", method=RequestMethod.POST)
 	@RequestMapping("/saveContact")
 	public ModelAndView submitContact(@RequestParam("contactName") String name, @RequestParam("contactEmail") String email, @RequestParam("contactContact") String mobile, @RequestParam("contactMessage") String message){
 		log.debug("Starting to save Contact Us Request");
@@ -45,7 +44,6 @@ public class ContactUsController {
 	}
 	
 	
-	// attach data to url we use @PathVariable
 		@RequestMapping("/manage-contactus-delete/{id}")
 		public ModelAndView deleteContactUs(@PathVariable("id") int id) {
 			

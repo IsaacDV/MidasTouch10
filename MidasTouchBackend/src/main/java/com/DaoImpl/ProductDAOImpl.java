@@ -19,8 +19,7 @@ public class ProductDAOImpl implements ProductDAO {
 	@Autowired
 	private SessionFactory sessionFactory;
 
-	// write user defined constructor with one parameter i.e., sessionFactory
-
+	
 	public ProductDAOImpl(SessionFactory sessionFactory) {
 		this.sessionFactory = sessionFactory;
 	}
@@ -71,7 +70,6 @@ public class ProductDAOImpl implements ProductDAO {
 		query.setString(0, categoryId);
 		return query.list();
 
-		// TODO Auto-generated method stub
 	}
 
 	public List<Product> getAllProductsBySupplierId(String supplierId) {

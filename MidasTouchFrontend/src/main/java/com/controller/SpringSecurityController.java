@@ -58,7 +58,6 @@ public class SpringSecurityController {
 	public String loginError(Model model) {
 		log.debug("Starting of the method loginError");
 		session.setAttribute("errorLoginMessage", "Invalid Credentials.  Please try again.");
-		// model.addAttribute("invalidCredentials", "true");
 		log.debug("Ending of the method loginError");
 		return "redirect:/Login";
 
@@ -78,7 +77,6 @@ public class SpringSecurityController {
 	public ModelAndView checkRole(HttpServletRequest request, HttpServletResponse response) throws Exception {
 		log.debug("starting of the method validate");
 		ModelAndView mv = new ModelAndView("Home");
-		// session = request.getSession(true);
 		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 
 		mv.addObject("categoryList", categoryDAO.list());
@@ -89,7 +87,6 @@ public class SpringSecurityController {
 		
 		mv.addObject("productList", productDAO.list());
 		mv.addObject("product", product);
-		//mv.addObject("isUserAtHomePage", "true");
 		
 		
 		String userID = auth.getName();

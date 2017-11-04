@@ -71,8 +71,7 @@ public class UserController {
 			session.setAttribute("loggedInUserID", id);
 
 
-			// check whether user role is admin or user
-
+			
 			if (user.getRole().equals("ROLE_ADMIN")) {
 				log.debug("You are admin");
 				mv.addObject("isAdmin", "true");

@@ -37,7 +37,6 @@ public class SupplierController {
 	@Autowired
 	Product product;
 
-	// crud supplier
 	@RequestMapping("/manage-supplier-add")
 	public ModelAndView createSupplier(@RequestParam("sId") String id, @RequestParam("sName") String name,
 			@RequestParam("sAddress") String address) {
@@ -60,9 +59,7 @@ public class SupplierController {
 
 		}
 
-		// get all categories
 		List<Supplier> supplierList = supplierDAO.list();
-		// attach to session
 		session.setAttribute("supplierList", supplierList);
 		session.setAttribute("supplier", supplier);
 

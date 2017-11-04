@@ -58,10 +58,8 @@ public class ProductController {
 	@Autowired
 	HttpSession session;
 
-	// Setting Path to store images
 	private String path = "//MidasTouch//src//main//webapp//resources//img";
 	
-	// Add or Update Product
 	@PostMapping("/manage-product-add")
 	public String addPorduct(@ModelAttribute("product") Product product, @RequestParam("image") MultipartFile file,
 			Model model) {
@@ -120,7 +118,6 @@ public class ProductController {
 		return "redirect:/viewProduct";
 	}
 
-	// Delete Product
 	@RequestMapping("/manage-product-delete/{id}")
 	public String deleteProduct(@PathVariable("id") String id, Model model) {
 		log.debug("Starting of the method deleteProduct");
@@ -137,7 +134,6 @@ public class ProductController {
 	}
 
 	
-	// Edit Products
 	@RequestMapping("/manage-product-edit/{id}")
 	public String editProduct(@PathVariable("id") String id, Model model) {
 		log.debug("Starting of the method editProduct");
@@ -147,7 +143,6 @@ public class ProductController {
 		return "redirect:/manageProducts";
 	}
 
-	// Get select product details
 	@RequestMapping("/manage-product-get/{id}")
 	public ModelAndView getSelectedProduct(@PathVariable("id") String id, RedirectAttributes redirectAttributes) {
 		log.debug("Starting of the method getSelectedProduct");

@@ -43,7 +43,6 @@ border-radius:0px;
 				
 				<ul class="nav navbar-nav navbar-right nav-pills">
 					<c:if test="${isUserLoggedIn=='true'}"> 
-						<!--<c:url var="Logout" value="/j_spring_security_Logout"/>--> 
 						<li><a href="myCart"><i class="fa fa-shopping-cart" aria-hidden="true"></i> My Cart <span class="label label-info">${cartSize}</span></a></li>
 						<li><a href="secure_logout"><i class="fa fa-sign-out" aria-hidden="true"></i> Log Out </a></li>
 
@@ -76,7 +75,6 @@ border-radius:0px;
 										<li><a role="menuitem" href="viewProduct/${product.id}">${product.name}</a></li>
 									</c:if>
 									
-									<!-- <li><a href="#">${product.name}</a></li> -->
 								</c:forEach>
 							<li class="divider"></li>
 					</c:forEach>

@@ -14,8 +14,7 @@
 	<div class="container">
 		<div class="h2">Manage Categories</div>
 
-		<!-- isAdminClickedManageCategoryEdit -->
-		<!-- Update Category -->
+		
 		<c:if test="${isAdminClickedManageCategoryEdit=='true'}">
 			<div id="UpdateCategory">
 				<div class="h3">Update Category</div>
@@ -49,7 +48,7 @@
 				</form>
 			</div>
 		</c:if>
-		<!-- Create Category -->
+		
 		<c:if test="${!isAdminClickedManageCategoryEdit=='true'}">
 				<!-- Add Category -->
 				<div id="CreateCategory">
@@ -84,7 +83,7 @@
 				</div>
 		</c:if>
  
-		<!-- Show Category -->
+		
 		<div id="ShowCategories">
 			<div class="h3">Show Categories</div>
 			<table class="table table-striped">
@@ -101,8 +100,6 @@
 						<td>${category.id}</td>
 						<td>${category.name}</td>
 						<td>${category.description}</td>
-						<%-- <td><a href="manage-category-delete/${category.id}" class="btn btn-danger">Delete</a>  --%>
-						<%-- <a href="manage-category-edit/${category.id}" class="btn btn-info">Edit</a></td> --%>
 						<td><a href="manage-category-delete/${category.id}" class="btn btn-danger"><i class="fa fa-trash-o fa-lg"></i> Delete</a> <a href="manage-category-edit/${category.id}" class="btn btn-info"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit</a></td>
 					</tr>
 				</c:forEach>

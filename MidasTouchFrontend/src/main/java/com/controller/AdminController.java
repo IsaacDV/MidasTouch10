@@ -32,8 +32,6 @@ public class AdminController {
 	@Autowired Contact contact;
 	@Autowired ContactDAO contactDAO;
 	
-	//Logger Statements
-	//SLF4J - Simple Logging Facade for Java
 	private static Logger log = LoggerFactory.getLogger(AdminController.class); 
 	
 
@@ -47,7 +45,6 @@ public class AdminController {
 		session.setAttribute("category", category);
 		session.setAttribute("isUserLoggedIn", "false");
 		log.debug("Ending of the method manageCategories");
-		//mv.addObject("isAdminClickedManageCategoryEdit", "false");
 		return mv;
 	}
 	

@@ -22,34 +22,34 @@
 					<div class="carousel-inner">
 						<div class="item active">
 							<a href="">
-								<img src="<c:url value="/resources/images/ad1.jpg" />" alt="Image 1" style="width:100%;">
+								<img src="<c:url value="/resources/images/ad1.jpg" />" alt="Image 1" style="width:100%;height:500px;">
 							</a>
 
 						</div>
 						<div class="item">
 							<a href="">
-								<img src="<c:url value="/resources/images/img1.jpg" />" alt="Image 1" style="width:100%;">
+								<img src="<c:url value="/resources/images/img1.jpg" />" alt="Image 1" style="width:100%;height:500px;">
 							</a>
 
 						</div>
 						<div class="item">
 							<a href="">
-								<img src="<c:url value="/resources/images/img2.jpg" />" alt="Image 2" style="width:100%;">
+								<img src="<c:url value="/resources/images/img2.jpg" />" alt="Image 2" style="width:100%;height:500px;">
 							</a>
 						</div>
 						<div class="item">
 							<a href="">
-								<img src="<c:url value="/resources/images/img3.jpg" />" alt="Image 3" style="width:100%;">
+								<img src="<c:url value="/resources/images/img3.jpg" />" alt="Image 3" style="width:100%;height:500px;">
 							</a>
 						</div>
 						<div class="item">
 							<a href="">
-								<img src="<c:url value="/resources/images/img4.jpg" />" alt="Image 4" style="width:100%;">
+								<img src="<c:url value="/resources/images/img4.jpg" />" alt="Image 4" style="width:100%;height:500px;">
 							</a>
 						</div>
 						<div class="item">
 							<a href="">
-								<img src="<c:url value="/resources/images/img5.jpg" />" alt="Image 5" style="width:100%;">
+								<img src="<c:url value="/resources/images/img5.jpg" />" alt="Image 5" style="width:100%;height:500px;">
 							</a>
 						</div>
 

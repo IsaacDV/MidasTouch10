@@ -22,8 +22,6 @@ import com.Model.Product;
 @Controller
 public class CategoryController {
 
-	// Logger Statements
-	// SLF4J - Simple Logging Facade for Java
 	private static Logger log = LoggerFactory.getLogger(CategoryController.class);
 
 	@Autowired
@@ -40,7 +38,6 @@ public class CategoryController {
 	@Autowired
 	Product product;
 
-	// crud category
 	@RequestMapping("/manage-category-add")
 	public ModelAndView createCategory(@RequestParam("cId") String id, @RequestParam("cName") String name,
 			@RequestParam("cDescription") String description) {
@@ -63,22 +60,17 @@ public class CategoryController {
 
 		}
 
-		// get all categories
 		List<Category> categoryList = categoryDAO.list();
-		// attach to session
 		session.setAttribute("categoryList", categoryList);
 		session.setAttribute("category", category);
 		session.setAttribute("isUserLoggedIn", "false");
 
-		// Before calling save method, check whether category_id already exists in db
-		// if it does not exist, then only call save method.
 		session.setAttribute("isAdminClickedManageCategoryEdit", "false");
 		log.debug("Ending of create category");
 		return mv;
 
 	}
 
-	// attach data to url we use @PathVariable
 	@RequestMapping("/manage-category-delete/{id}")
 	public ModelAndView deleteCategory(@PathVariable("id") String id) {
 		
@@ -86,7 +78,6 @@ public class CategoryController {
 		log.info("You are about to delete a category with id : " + id);
 		
 		ModelAndView mv = new ModelAndView("redirect:/manageCategories");
-		//Check whether products are there for this category or not
 		int noOfProducts = productDAO.getAllProductsByCategoryId(id).size();
 		if(noOfProducts != 0){
 			log.debug("Few products are there under this category, you cannot delete!");
@@ -105,7 +96,6 @@ public class CategoryController {
 		return mv;
 	}
 	
-	//Edit category
 	@RequestMapping("/manage-category-edit/{id}")
 	public ModelAndView editCategory(@PathVariable("id") String id){
 		log.debug("Starting of editCategory");
@@ -113,8 +103,6 @@ public class CategoryController {
 		
 		category = categoryDAO.getCategoryById(id);
 		
-		//Selected category details we have to store in another instance
-		//i.e., ModelAndView instance
 		ModelAndView mv = new ModelAndView("redirect:/manageCategories");
 
 		session.setAttribute("isAdminClickedManageCategoryEdit", "true");
@@ -148,10 +136,6 @@ public class CategoryController {
 			mv.addObject("cMessage", "Category updated success with id : " + id);
 
 		}
-		//session.setAttribute("selectedCategory", newCategory());
-		// Before calling save method, check whether category_id already exists
-		// in db
-		// if it does not exist, then only call save method.
 		
 		session.setAttribute("isAdminClickedManageCategoryEdit", "false");
 		log.debug("Ending of updateCategory");
