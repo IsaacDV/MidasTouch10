@@ -41,7 +41,7 @@ public class UserDAOTestCase {
 		user.setPassword("isaac");
 		user.setCountry("India");
 		user.setAddress("Hyderabad");
-		user.setRole("ROLE_ADMIN");
+		user.setRole("ROLE_USER");
 		user.setContact("8194869957");
 		boolean flag = userDAO.save(user);
 
@@ -57,7 +57,7 @@ public class UserDAOTestCase {
 		user.setPassword("isaac");
 		user.setCountry("India");
 		user.setAddress("Hyderabad");
-		user.setRole("ROLE_ADMIN");
+		user.setRole("ROLE_USER");
 		user.setContact("9490167876");
 		boolean flag = userDAO.update(user);
 
