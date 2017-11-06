@@ -8,6 +8,7 @@
 </head>
 <body>
 	<div class="container-fluid">
+			
 				<div class="carousel slide" id="carousel1" data-ride="carousel">
 
 					<ol class="carousel-indicators">
@@ -63,6 +64,7 @@
 					</a>
 
 				</div>
+			</div>
 	</div>
 </body>
 </html>
