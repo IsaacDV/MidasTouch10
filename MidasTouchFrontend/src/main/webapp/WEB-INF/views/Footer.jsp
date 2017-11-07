@@ -29,10 +29,10 @@
 				<a href="http://linkedin.com" target="_blank">
 					<i class="fa fa-linkedin fa-lg"></i>
 				</a>
-				<a href="https://plus.google.com" target="_blank">
+				<a href="https://plus.google.com/105018105039014863203" target="_blank">
 					<i class="fa fa-google-plus fa-lg"></i>
 				</a>
-				<a href="https://github.com" target="_blank">
+				<a href="https://github.com/IsaacDV" target="_blank">
 					<i class="fa fa-github fa-lg"></i>
 				</a>
 			</div>

@@ -17,9 +17,9 @@
 				</div>
 				<div class="col-md-5 col-xs-7">
 					<div class="h2">${selectedProduct.name}</div>
-					<div class="h3">Product description: ${selectedProduct.description}</div>
-					<div class="h4">Product category: ${selectedProduct.category_id}</div>
-					<div class="h4">Product seller: ${selectedProduct.supplier_id}</div>
+					<div class="h3"><b>Product description:</b> ${selectedProduct.description}</div>
+					<div class="h4"><b>Product category:</b> ${selectedProduct.category_id}</div>
+					<div class="h4"><b>Product seller:</b> ${selectedProduct.supplier_id}</div>
 				</div>
 				<div class="col-md-3 col-xs-5">
 					

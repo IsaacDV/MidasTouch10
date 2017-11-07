@@ -32,9 +32,9 @@ public class HiberConfig {
 
 		DriverManagerDataSource dataSource = new DriverManagerDataSource();
 
-		dataSource.setUrl("jdbc:h2:tcp://localhost/~/niit");
+		dataSource.setUrl(" jdbc:h2:tcp://localhost/~/Midas-Touch");
 		dataSource.setDriverClassName("org.h2.Driver");
-		dataSource.setUsername("sa");
+		dataSource.setUsername("Midas-Touch");
 		dataSource.setPassword("");
 
 		return dataSource;

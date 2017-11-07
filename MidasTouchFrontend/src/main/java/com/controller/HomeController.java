@@ -17,10 +17,12 @@ import com.Dao.CategoryDAO;
 import com.Dao.My_CartDAO;
 import com.Dao.ProductDAO;
 import com.Dao.SupplierDAO;
+import com.Dao.UserDAO;
 import com.Model.Category;
 import com.Model.My_Cart;
 import com.Model.Product;
 import com.Model.Supplier;
+import com.Model.User;
 
 @Controller
 public class HomeController {
@@ -47,6 +49,12 @@ public class HomeController {
 
 	@Autowired
 	SupplierDAO supplierDAO;
+	
+	@Autowired
+	User user;
+	
+	@Autowired
+	UserDAO userDAO;
 
 	@Autowired
 	My_Cart myCart;
@@ -101,6 +109,9 @@ public class HomeController {
 
 		session.setAttribute("supplierList", supplierList);
 		session.setAttribute("supplier", supplier);
+		
+		String loggedInUserID = (String) session.getAttribute("loggedInUserID");
+		mv.addObject("Username", loggedInUserID);
 
 		return mv;
 	}

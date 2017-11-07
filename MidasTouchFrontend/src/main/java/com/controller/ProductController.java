@@ -58,7 +58,7 @@ public class ProductController {
 	@Autowired
 	HttpSession session;
 
-	private String path = "//MidasTouch//src//main//webapp//resources//img";
+	private String path = "//MidasTouchFrontend//src//main//webapp//resources//img";
 	
 	@PostMapping("/manage-product-add")
 	public String addPorduct(@ModelAttribute("product") Product product, @RequestParam("image") MultipartFile file,

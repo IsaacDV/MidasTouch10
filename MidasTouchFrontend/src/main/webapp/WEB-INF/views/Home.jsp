@@ -27,7 +27,6 @@
 <body>
 	
 	<jsp:include page="Menu.jsp"></jsp:include>
-	
 	<div class="container-fluid">
 	</div>
 
