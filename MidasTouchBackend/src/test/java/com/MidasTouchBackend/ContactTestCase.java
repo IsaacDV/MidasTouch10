@@ -10,7 +10,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import com.Dao.ContactDAO;
 import com.Model.Contact;
 
-public class ContactDAOTestCase {
+public class ContactTestCase {
 
 	@Autowired
 	static AnnotationConfigApplicationContext context;

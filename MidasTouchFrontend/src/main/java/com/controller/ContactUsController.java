@@ -1,5 +1,7 @@
 package com.controller;
 
+import javax.servlet.http.HttpSession;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +24,9 @@ public class ContactUsController {
 	@Autowired Contact contact;
 	@Autowired ContactDAO contactDAO;
 	
+	@Autowired
+	HttpSession session;
+	
 	
 	@RequestMapping("/saveContact")
 	public ModelAndView submitContact(@RequestParam("contactName") String name, @RequestParam("contactEmail") String email, @RequestParam("contactContact") String mobile, @RequestParam("contactMessage") String message){
@@ -40,6 +45,8 @@ public class ContactUsController {
 		else {
 			mv.addObject("message", "Error submitting contact request. Please try again");
 		}
+		String loggedInUserID = (String) session.getAttribute("loggedInUserID");
+		mv.addObject("Username", loggedInUserID);
 		return mv;
 	}
 	

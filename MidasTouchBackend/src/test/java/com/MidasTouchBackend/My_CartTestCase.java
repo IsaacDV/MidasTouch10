@@ -12,7 +12,7 @@ import com.Dao.ProductDAO;
 import com.Model.My_Cart;
 import com.Model.Product;
 
-public class My_CartDAOTestCase {
+public class My_CartTestCase {
 
 	@Autowired
 	static AnnotationConfigApplicationContext context;

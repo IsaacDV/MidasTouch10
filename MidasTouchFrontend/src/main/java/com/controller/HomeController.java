@@ -65,7 +65,6 @@ public class HomeController {
 	@RequestMapping("/")
 	public ModelAndView goToHome() {
 		ModelAndView mv = new ModelAndView("Home");
-		mv.addObject("message", "Thank you for visiting Midas Touch! <br>");
 		mv.addObject("isUserAtHomePage", "true");
 		
 		List<Category> categoryList = categoryDAO.list();
@@ -83,6 +82,8 @@ public class HomeController {
 		session.setAttribute("supplierList", supplierList);
 		session.setAttribute("supplier", supplier);
 		
+		String loggedInUserID = (String) session.getAttribute("loggedInUserID");
+		mv.addObject("Username", loggedInUserID);
 
 		return mv;
 	}
@@ -92,7 +93,6 @@ public class HomeController {
 	@RequestMapping("/Home")
 	public ModelAndView goToHomeButton() {
 		ModelAndView mv = new ModelAndView("Home");
-		mv.addObject("message", "Thank you for visiting Midas Touch! <br>");
 		mv.addObject("isUserAtHomePage", "true");
 		
 		List<Category> categoryList = categoryDAO.list();

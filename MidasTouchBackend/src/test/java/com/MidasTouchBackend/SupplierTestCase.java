@@ -10,7 +10,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import com.Dao.SupplierDAO;
 import com.Model.Supplier;
 
-public class SupplierDAOTestCase {
+public class SupplierTestCase {
 
 	@Autowired
 	static AnnotationConfigApplicationContext context;

@@ -10,7 +10,7 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import com.Dao.OrderTableDAO;
 import com.Model.OrderTable;
 
-public class OrderTableDAOTestCase {
+public class OrderTableTestCase {
 
 	@Autowired
 	static AnnotationConfigApplicationContext context;

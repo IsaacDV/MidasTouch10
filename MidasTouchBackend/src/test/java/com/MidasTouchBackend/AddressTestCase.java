@@ -12,7 +12,7 @@ import com.Model.Address;
 
 
 
-public class AddressDAOTestCase {
+public class AddressTestCase {
 
 	@Autowired
 	static AnnotationConfigApplicationContext context;

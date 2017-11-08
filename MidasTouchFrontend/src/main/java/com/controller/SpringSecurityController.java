@@ -117,6 +117,8 @@ public class SpringSecurityController {
 			
 
 		}
+		String loggedInUserID = (String) session.getAttribute("loggedInUserID");
+		mv.addObject("Username", loggedInUserID);
 		log.debug("Ending of the method validate");
 		return mv;
 	}

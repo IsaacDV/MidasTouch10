@@ -39,6 +39,8 @@ public class CartController {
 	@RequestMapping("/myCart")
 	public String myCart(Model model) {
 		log.debug("Starting of myCart in CartController");
+		
+		ModelAndView mv = new ModelAndView("myCart");
 
 		
 		String loggedInUserID = (String) session.getAttribute("loggedInUserID");
@@ -61,6 +63,8 @@ public class CartController {
 			}
 
 		}
+		
+		mv.addObject("Username", loggedInUserID);
 
 		log.debug("Ending of myCart in CartController");
 		return "Home";
