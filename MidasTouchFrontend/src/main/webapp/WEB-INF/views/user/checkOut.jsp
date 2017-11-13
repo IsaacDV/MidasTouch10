@@ -16,7 +16,7 @@
 		</div>
 
 		<div class="h2 text-success text-center">You are cool!</div>
-		<div class="h2 text-center">Thank you for checking out. The amount of <b class="text-success"><i class="fa fa-inr" aria-hidden="true"></i> ${totalAmount}</b> has been received.</div>
+		<div class="h2 text-center">Thank you for checking out. The amount of <b class="text-success"><i class="fa fa-inr" aria-hidden="true"></i> ${totalAmount}</b> will be received at the time of delivery.</div>
 		<div class="h2 text-center">The product will be delivered in 2-5 business days.</div>
 
 		<img src="<c:url value="/resources/images/Thank You.gif" />" alt="Thank You GIF" class="img-responsive center-block" />

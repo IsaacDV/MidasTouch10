@@ -108,6 +108,8 @@ public class ProductController {
 	@RequestMapping("/viewProduct")
 	public String viewProductHome(Model model) {
 		model.addAttribute("isUserSelectedProduct", "true");
+		String loggedInUserID = (String) session.getAttribute("loggedInUserID");
+		model.addAttribute("Username", loggedInUserID);
 		return "Home";
 		
 	}
@@ -157,12 +159,16 @@ public class ProductController {
 			session.setAttribute("selectedCategoryProducts", productDAO.getAllProductsByCategoryId(category_id));
 			session.setAttribute("product",product);
 			model.addAttribute("isUserClickedProductByCategory", "true");
+			String loggedInUserID = (String) session.getAttribute("loggedInUserID");
+			model.addAttribute("Username", loggedInUserID);
 		return "redirect:/productByCategory";
 	}
 	
 	@RequestMapping("/productByCategory")
 	public String productByCategory(Model model){
 		model.addAttribute("isUserClickedProductByCategory", "true");
+		String loggedInUserID = (String) session.getAttribute("loggedInUserID");
+		model.addAttribute("Username", loggedInUserID);
 		return "Home";
 
 	}

@@ -5,7 +5,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>MyCart</title>
 </head>
 <body>
 	<div class="container">
@@ -36,7 +36,17 @@
 					<tr>
 						<td>${cart.product_name}</td>
 						<td><fmt:formatDate pattern="dd/MM/yyyy" value="${cart.date_added}" /></td>
-						<td>${cart.quantity}</td>
+						<td>
+								<input type="number" id="quant" value="${cart.quantity}"/>						
+						<!-- <form class="form-horizontal" action="myCart-quant/${cart.id}" method="get">
+	 							<div class="form-group">
+							        <input type="number" id="quant" value="${cart.quantity}"/>
+							    </div>
+							    <div class="form-group">
+							        <button type="submit"><i class="fa fa-refresh" aria-hidden="true"></i></button>
+    							</div>
+    						</form> -->
+    					</td>
 						<td>${cart.price}</td>
 						<td><a href="myCart-delete/${cart.id}" class="btn btn-danger">Remove</a></td>
 					</tr>

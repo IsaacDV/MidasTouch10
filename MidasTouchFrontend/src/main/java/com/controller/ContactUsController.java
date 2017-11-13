@@ -32,6 +32,8 @@ public class ContactUsController {
 	public ModelAndView submitContact(@RequestParam("contactName") String name, @RequestParam("contactEmail") String email, @RequestParam("contactContact") String mobile, @RequestParam("contactMessage") String message){
 		log.debug("Starting to save Contact Us Request");
 		ModelAndView mv = new ModelAndView("redirect:/Home");
+		String loggedInUserID = (String) session.getAttribute("loggedInUserID");
+		mv.addObject("Username", loggedInUserID);
 		
 		contact.setName(name);
 		contact.setEmail(email);
@@ -45,8 +47,7 @@ public class ContactUsController {
 		else {
 			mv.addObject("message", "Error submitting contact request. Please try again");
 		}
-		String loggedInUserID = (String) session.getAttribute("loggedInUserID");
-		mv.addObject("Username", loggedInUserID);
+		
 		return mv;
 	}
 	

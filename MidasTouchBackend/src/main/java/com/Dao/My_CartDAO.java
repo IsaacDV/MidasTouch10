@@ -10,6 +10,10 @@ public interface My_CartDAO {
 
 	public boolean update(My_Cart my_Cart);
 	
+	public boolean updateQuant(int quant,String user_id);
+	
+	public boolean updatePrice(Double price,String user_id);
+	
 	public boolean delete(int id);
 	
 	public boolean deleteAllProductsInCart(String user_id);

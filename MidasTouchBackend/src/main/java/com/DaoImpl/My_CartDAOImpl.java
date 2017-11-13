@@ -79,6 +79,31 @@ public class My_CartDAOImpl implements My_CartDAO {
 		
 	}
 
+	@Override
+	public boolean updateQuant(int quant,String user_id) {
+		try {
+			sessionFactory.getCurrentSession().createQuery("update My_Cart set Quantity = ? where user_id = ?").setInteger(0, quant).setString(1, user_id).executeUpdate();
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+			return false;
+		}
+		return true;
+	}
+
+	@Override
+	public boolean updatePrice(Double price, String user_id) {
+		
+		try {
+			sessionFactory.getCurrentSession().createQuery("update My_Cart set Price = ? where user_id = ?").setDouble(0, price).setString(1, user_id).executeUpdate();
+			
+		} catch (Exception e) {
+			e.printStackTrace();
+			return false;
+		}
+		return true;
+	}
+
 	
 
 }

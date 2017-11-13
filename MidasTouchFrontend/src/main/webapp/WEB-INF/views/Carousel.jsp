@@ -9,7 +9,7 @@
 <body>
 	<div class="container-fluid">
 			
-				<div class="carousel slide" id="carousel1" data-ride="carousel">
+				<div class="carousel slide" id="myCarousel" data-ride="carousel">
 
 					<ol class="carousel-indicators">
 						<li data-target="#myCarousel" data-slide-to="0" class="active"></li>

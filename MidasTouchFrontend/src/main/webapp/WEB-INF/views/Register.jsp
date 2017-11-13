@@ -14,7 +14,7 @@
   	<div class="form-group">
       <label class="control-label col-sm-2" for="uEmail"><i class="fa fa-envelope" aria-hidden="true"></i> Email:</label>
       <div class="col-sm-10">
-        <input type="text" class="form-control" id="uEmail" placeholder="Enter your email id...." name="uEmail" required>
+        <input type="email" class="form-control" id="uEmail" placeholder="Enter your email id...." name="uEmail" required>
       </div>
     </div>
     <div class="form-group">
